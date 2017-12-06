@@ -18,8 +18,5 @@
   "bugs": {
     "url": "https://github.com/clarkefry04/hangman_constructor/issues"
   },
-  "homepage": "https://github.com/clarkefry04/hangman_constructor#readme",
-  "dependencies": {
-  "inquirer": "^4.0.1"
-  }
+  "homepage": "https://github.com/clarkefry04/hangman_constructor#readme"
 }

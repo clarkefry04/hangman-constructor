@@ -1,3 +1,5 @@
+//main.js contains the logic to "run" the game. Running this in terminal should prompt the user to start the game.
+
 var prompt = require("prompt");
 var Game = require('./game.js');
 var word = require('./words.js');
@@ -9,7 +11,7 @@ console.log("Guess a lettter of the name of a famous Christmas Character!");
 console.log("Good luck!");
 
 
-	prompt.start(); //starting the prompt
+	prompt.start(); 
 	letTheGameBegin(userGuess);
 		function letTheGameBegin(guesses){
 			console.log("Guesses left: " + guesses);
@@ -18,14 +20,13 @@ console.log("Good luck!");
 				console.log("Final word: " + hangmanGame.currentWord.display());
 				return;
 			}
-			//if the user is out of gusses!
 			if(guesses <= 0){
 				console.log("Game Over!");
-				console.log("Correct word: " + hangmanGame.currentWord.words);
+				console.log("Correct word: " + hangmanGame.currentWord.words); //displays the correct word without the "_"
 				console.log("Play again!");
 				return;
 			}
-
+		//displays the "_" with the correct number of spaces for the respective word.
 		console.log(hangmanGame.currentWord.display());
 
 	prompt.get(["theGuess"], function(err, result){

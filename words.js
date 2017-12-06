@@ -7,16 +7,17 @@ var Word = function(words){
 	this.youWin = false;
 	this.guesses = [];
 
-
+	//function to grab the letter within the randomy selected word.
 	this.grabLetters = function(){
 		for(var i = 0; i <this.words.length; i++){
 			var theNewLetter = new Letter(this.words[i]);
 			this.guessedWord.push(theNewLetter);
 		}
 	}
-	
+
 	this.grabLetters();
 
+	//function that finds the letter in the guesses array.
 	this.foundIt = function(guessLetter){
 		for(var i = 0; i <this.guesses.length; i++){
 			if(guessLetter == this.guesses[i]){
@@ -36,6 +37,7 @@ var Word = function(words){
 		return added;
 	}
 
+	//compares the letter in the wordBank with the letter input by the user.
  	this.comparingWords = function(){
  		for(var i = 0; i < this.words.length; i++){
  			if(this.words.charAt(i) != this.guessedWord[i].current){
@@ -45,7 +47,7 @@ var Word = function(words){
  		}
  				return true;
  	}
-
+ 	//displays the letter in a string.
 	this.display = function(){
 		var emptyString = "";
 			

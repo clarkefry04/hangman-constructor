@@ -10,7 +10,7 @@ var Letter = function(lets){
 		}
 			return false;
 	}
-
+	//Function that tells us whether or not the letter or the "_" should appear.
 	this.letterShows = function(){
 		return this.current;
 	}
